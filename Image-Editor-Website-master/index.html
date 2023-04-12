@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERP</title>
+    <link rel="icon" href="images/logo.jpeg" type="image" />
+    <script src="https://www.dukelearntoprogram.com//course1/common/js/image/SimpleImage.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <!-- <link rel="stylesheet" href="./contact/contact.css" /> -->
+    <link rel="stylesheet" href="./contact/contact.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Cairo:wght@600&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Cairo:wght@600&family=Reggae+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <div class="wrapper"> -->
+    <div class="pahila">
+      <header>
+            <div class="container">
+                <nav id="myTopnav" class="topnav">
+                  <div class="chitra">
+                    <img id="pic" src="images/photo-editing-icon.jpg" alt="Error in loading Image">
+                    <h1 class="brand" style="letter-spacing: 3px;">EASY REDACTOR PHOTO</h1>
+                  </div>
+
+                    <div class="ull">
+                     
+                    </div>
+                    <div  class="icon-bar">
+                      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+      <section id="home">
+        <p class="qaz">Простой Онлайн фото редактор<br /></p>
+        <p class="qaz"></p>
+        <a href="#black2"
+          ><button class="btnm"><b>Начать</b></button></a
+        >
+      </section>
+
+      <div class="asd">
+        <div id="div1">
+          <img class="icons" src="images/icon/Upload.png" alt="" />
+          <h2>1. Загрузить</h2>
+          <p>
+          Сначала загрузите изображение на холст.Используйте кнопку Загрузить изображение и
+выберите изображение, которое вы хотите отредактировать.
+          </p>
+        </div>
+        <div id="div1">
+          <img class="icons" src="images/icon/image-editor.png" alt="" />
+          <h2>2. Редактирировать</h2>
+          <p>
+            Для редактирования изображения справа есть различные варианты редактирования, вы
+также можете сбросить изображение.
+          </p>
+        </div>
+        <div id="div1">
+          <img class="icons" src="images/icon/Download.png" alt="" />
+          <h2>3. Сохранить</h2>
+          <p>
+            После редактирования фото, просто установите картинку нажав на соответствующую кнопку
+          </p>
+        
+    
+        </div>
+      </div>
+    </div>
+
+    <div id="black"><p>Редактор</p></div>
+    <div id="black2"></div>
+
+    <!-- <div class="edit"> -->
+
+    <div class="bigcont">
+      <div class="right">
+        <div class="cd ">
+          <div class="choose">
+            <input type="file" multiple="false"
+            accept="image/*"  id="finput"
+            onchange="upload()" />
+          <button type="button" onclick="download()">установить</button>
+        </div>
+
+        <div class="rc">
+          <button  class="reset_clear" type="button" onclick="reset()">  сбросить
+          </button>
+          <button class="reset_clear" type="button" onclick="location.reload();">
+            очистить
+          </button>
+        </div>
+        </div>
+
+        <canvas id="can"></canvas>
+
+      </div>
+
+        <div class="btn left">
+        <div class="slideContainer">
+          <div class="scont">
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            step="1"
+            onchange="applyRed()"
+            id="myRange1"
+            class="slider"
+          />
+          <p id="red">оранжевый: <span id="value1"></span></p>
+          </div>
+          
+         <div class="scont">
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="1"
+            step="1"
+            onchange="applyGreen()"
+            id="myRange2"
+            class="slider" 
+           />
+          <p id="green">Зелёный: <span id="value2"></span></p>
+          </div> 
+
+          <div class="scont">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="1"
+            step="1"
+            onchange="applyBlue()"
+            id="myRange3"
+            class="slider"
+          />
+          <p id="blue">Синий: <span id="value3"></span></p>
+
+          </div>    
+
+          <div class="scont">
+           <input
+            type="range"
+            min="1"
+            max="100"
+            value="1"
+            step="1"
+            onchange="applyGray()"
+            id="myRange4"
+            class="slider"
+          />
+          <p id="gray">Серый: <span id="value4"></span></p>
+
+           </div>
+           
+           <div class="scont">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="1"
+            step="1"
+            onchange="contrast()"
+            id="myRange5"
+            class="slider"
+          />
+
+          <p id="contrast">Контраст: <span id="value5"></span></p>
+        </div>
+        <div class="scont">
+
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="1"
+            step="1"
+            onchange="saturate()"
+            id="myRange6"
+            class="slider"
+          />
+
+          <p id="saturate">Насыщенность: <span id="value6"></span></p>
+        </div>
+
+        <div class="bis">
+          <button type="button" onclick="applyBright()" id="bright">
+            Яркость </button>
+
+          <button type="button" onclick="invert()" id="invert">
+            Инверсия</button>
+
+        </div>
+      </div> 
+      
+    </div> 
+    <!-- /*comment*/ds -->
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <footer>
+   
+    </footer>
+
+    <!-- <script src="x5"></script> -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <script src="./about/img.js"></script>
+  </body>
+</html>
